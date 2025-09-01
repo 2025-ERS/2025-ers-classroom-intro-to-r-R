@@ -49,6 +49,40 @@ numeric_vector <- c(1, 2, 3, 4)
 print(numeric_vector) # print the value of numeric_vector
 
 # -------------------------- 03 Lists, data frames and tibbles ----------------
+# a list is a collection of objects, which can be of different types and lengths
+# such as text, numbers or boolean variables
+# Create a simple list
+my_list <- list(
+  name = "Elephant",
+  weight = 5400,
+  is_endangered = TRUE,
+  colors = c("gray", "white")
+)
+my_list
+# in practice, we typically read a dataframe from a file, not create it ourselves in a script like this
+
+my_list$name # print the value of the name element in my_list
+my_list$weight # print the value of the weight element in my_list
+
+# A data frame is a table-like structure, where each column can be of a different type (numeric, character, logical)
+# Create a simple data frame
+data_herbivores <- data.frame(
+  id = c(1, 2, 3),
+  species = c("Elephant", "Buffalo", "Impala"),
+  bodymass_kg = c(5400, 800, 50),
+  is_ungulate = c(FALSE, TRUE, TRUE)
+)
+data_herbivores # print  data_herbivores dataframe
+names(data_herbivores) # print the names of the variables in data_herbivores
+class(data_herbivores) # print the class of data_herbivores
+data_herbivores$species # print the species column in data_herbivores (which becomes a vector)
+# selecting rows and columns of a dataframe using the dplyr library plus the pipe operator |>
+data_herbivores |> dplyr::select(species, bodymass_kg) # select the species and bodymass_kg columns from data_herbivores
+data_herbivores |> dplyr::filter(bodymass_kg > 100) # filter the rows where bodymass_kg is greater than 100
+
+# A tibble is a modern version of a data frame, which is part of the tidyverse
+# it shows the types of the variables, and only the first 10 rows and columns that fit on the screen
+data_herbivores |> tibble::as_tibble() 
 
 
 # -------------------------- 04 Data types - numeric and logical ----------------
