@@ -1,5 +1,5 @@
 # --------------------------HEADER ----------------
-# title: "02-R-basics.R"
+# title: "02-R-basics.R "
 # author: "Han Olff"
 # date: "2025-8-22"
 # description: "Some basics of R"
