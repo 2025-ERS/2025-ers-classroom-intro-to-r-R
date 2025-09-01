@@ -48,7 +48,7 @@ class_size # print the value of class_size
 numeric_vector <- c(1, 2, 3, 4) 
 print(numeric_vector) # print the value of numeric_vector
 
-# -------------------------- 03 Lists, data  frames and tibbles ----------------
+# -------------------------- 03 Lists, data frames and tibbles ----------------
 # a list is a collection of objects, which can be of different types and lengths
 # such as text, numbers or boolean variables
 # Create a simple list
